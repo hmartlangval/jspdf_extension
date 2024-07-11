@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es6",                   // Specify ECMAScript target version
+    "module": "CommonJS",                   // Target is commonJS here becuase we are targetting Twilio Functions platform primarily and it supports only CommonJS
+    "outDir": "./dist",                // Redirect output structure to the directory
+    "rootDir": "./src",                // Specify the root directory of input files
+    "strict": true,                    // Enable all strict type-checking options
+    "esModuleInterop": true,           // Enable import/export interoperability between CommonJS and ES Modules
+    "skipLibCheck": true,              // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+    "moduleResolution":"node",
+    "removeComments": true
+  }
+}

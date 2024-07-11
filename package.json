@@ -1,0 +1,26 @@
+{
+  "name": "jspdf_enhanced_nelvin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "twilio_fixes": "node dev-lib/twilio-functions/rename-js-private-js.js && node dev-lib/twilio-functions/replace-requires.js",
+    "build4twilio": "rd /s /q dist && tsc -p tsconfig.json && node dev-lib/copy-fonts && npm run twilio_fixes",
+    "build": "tsc -p tsconfig.json && node dev-lib/copy-fonts",
+    "clean": "rd /s /q dist",
+    "download": "node ./src/download-test.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jspdf": "^2.5.1",
+    "moment": "^2.30.1",
+    "typescript": "^5.5.2"
+  },
+  "devDependencies": {
+    "@types/jspdf": "^2.0.0",
+    "@types/node": "^20.14.9"
+  }
+}
